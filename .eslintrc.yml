@@ -1,0 +1,12 @@
+extends:
+  - '@osedea/eslint-config/react'
+  - '@osedea/eslint-config/typescript'
+  - '@osedea/eslint-config/jest'
+  - '@osedea/eslint-config/prettier' # this always needs to be last
+
+parserOptions:
+  project: './tsconfig.json'
+  warnOnUnsupportedTypeScriptVersion: false
+
+rules:
+  no-implicit-globals: 0

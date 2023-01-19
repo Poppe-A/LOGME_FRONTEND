@@ -1,0 +1,12 @@
+- type: input
+  name: name
+  message: What's the name of your component
+- type: confirm
+  name: usesState
+  message: Do you want to add a useState hook in your component
+- type: confirm
+  name: usesEffect
+  message: Do you want to add a useEffect hook in your component
+- type: confirm
+  name: isMemoized
+  message: Do you want to memoize this component

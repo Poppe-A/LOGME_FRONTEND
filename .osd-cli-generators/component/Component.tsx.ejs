@@ -1,0 +1,31 @@
+---
+to: src/components/<%= props.pascalCaseName %>/index.tsx
+---
+import React<% if (props.usesState || props.usesEffect) { %>, { <% if (props.usesEffect) { %>useEffect<% } %><% if (props.usesEffect && props.usesState) { %>, <% } %><% if (props.usesState) { %>useState<% } %> }<% } %> from 'react';
+import styled from 'styled-components';
+
+const Container = styled.div<IProps>`
+    padding: 1rem;
+    border: 1px solid currentColor;
+    border-radius: 0.25rem;
+`;
+
+interface IProps {}
+
+const <%= props.pascalCaseName %>: React.FC<IProps> = <% if (props.isMemoized) { %>React.memo(<% } %>(props: IProps) => {
+    <%_ if (props.usesState) { -%>
+    const [state, setState] = useState({});
+    <%_ } -%>
+    <%_ if (props.usesEffect) { -%>
+    useEffect(() => {
+        // Do something
+    }, []);
+    <%_ } -%>
+    return (
+        <Container data-testing="<%= props.pascalCaseName %>">
+            <%= props.pascalCaseName %> component!
+        </Container>
+    );
+}<% if (props.isMemoized) { %>);<% } %>
+
+export default <%= props.pascalCaseName %>;

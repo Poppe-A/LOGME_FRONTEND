@@ -1,0 +1,29 @@
+---
+to: src/pages/<%= props.kebabCaseName %>/<%= props.pascalCaseName %>Page.tsx
+---
+import React from 'react';
+import styled from 'styled-components';
+import { Helmet } from 'react-helmet-async';
+
+const Container = styled.section`
+    display: flex;
+    flex: 1;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+`;
+
+const <%= props.pascalCaseName %>Page: React.FC = () => {
+    return (
+        <>
+            <Helmet>
+                <title><%= props.pascalCaseName %>!!!!</title>
+            </Helmet>
+            <Container data-testid="<%= props.pascalCaseName %>_page">
+                <span>This is the <%= props.pascalCaseName %> page. Its one of the best pages!</span>
+            </Container>
+        </>
+    );
+};
+
+export default <%= props.pascalCaseName %>Page;

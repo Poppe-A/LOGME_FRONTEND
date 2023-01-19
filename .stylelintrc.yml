@@ -1,0 +1,3 @@
+extends:
+   - stylelint-config-osedea/styled-components
+  #  - stylelint-config-osedea/prettier

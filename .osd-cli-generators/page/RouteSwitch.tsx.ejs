@@ -1,0 +1,8 @@
+---
+to: src/Routes.tsx
+patch: true
+before: </Routes>
+---
+            <Route path="/<%= props.kebabCaseName %>">
+                <<%= props.pascalCaseName %>Page />
+            </Route>

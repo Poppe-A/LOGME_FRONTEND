@@ -1,0 +1,20 @@
+---
+to: src/pages/<%= props.kebabCaseName %>/<%= props.pascalCaseName %>Page.test.tsx
+---
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+
+import <%= props.pascalCaseName %>Page from './<%= props.pascalCaseName %>Page';
+
+describe('<%= props.pascalCaseName %> Page', () => {
+    it('should render <%= props.pascalCaseName %> page', () => {
+        // Arrange
+        render(<<%= props.pascalCaseName %>Page />);
+
+        // Act
+        const element = screen.getByText('This is the <%= props.pascalCaseName %> page', { exact: false });
+
+        // Assert
+        expect(element).toBeInTheDocument();
+    });
+});

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component generator generates correctly 1`] = `
+"import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
+
+const Container = styled.div<IProps>\`
+    padding: 1rem;
+    border: 1px solid currentColor;
+    border-radius: 0.25rem;
+\`;
+
+interface IProps {}
+
+const Foobar: React.FC<IProps> = React.memo((props: IProps) => {
+    const [state, setState] = useState({});
+    useEffect(() => {
+        // Do something
+    }, []);
+    return (
+        <Container data-testing=\\"Foobar\\">
+            Foobar component!
+        </Container>
+    );
+});
+
+export default Foobar;
+"
+`;

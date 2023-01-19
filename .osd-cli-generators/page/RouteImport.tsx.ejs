@@ -1,0 +1,6 @@
+---
+to: src/Routes.tsx
+patch: true
+after: import { Routes, Route } from 'react-router-dom';
+---
+import <%= props.pascalCaseName %>Page from './pages/<%= props.kebabCaseName %>/<%= props.pascalCaseName %>Page';

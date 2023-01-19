@@ -1,0 +1,81 @@
+{
+  "name": "react-starter",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:no-watch": "react-scripts test --watchAll=false",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
+    "eject": "react-scripts eject",
+    "analyze": "npm run build && source-map-explorer 'build/static/js/*.js'",
+    "tsc": "tsc",
+    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,json,md}'",
+    "format:check": "prettier --check 'src/**/*.{ts,tsx,js,jsx,json,md}'",
+    "lint": "eslint --fix 'src/**/*.{ts,tsx,js,jsx}'",
+    "lint:check": "eslint 'src/**/*.{ts,tsx,js,jsx}'",
+    "format-lint": "yarn format && yarn lint",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "1.7.1",
+    "axios": "0.24.0",
+    "i18next": "21.6.5",
+    "i18next-http-backend": "1.3.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-helmet-async": "1.2.2",
+    "react-i18next": "11.15.3",
+    "react-redux": "7.2.6",
+    "react-router-dom": "6.2.1",
+    "react-scripts": "5.0.0",
+    "redux": "4.1.2",
+    "sanitize.css": "13.0.0",
+    "styled-components": "5.3.3",
+    "styled-icons": "10.45.0",
+    "typescript": "4.5.4"
+  },
+  "devDependencies": {
+    "@osedea/eslint-config": "8.0.0",
+    "@testing-library/jest-dom": "5.16.1",
+    "@testing-library/react": "12.1.2",
+    "@testing-library/user-event": "13.5.0",
+    "@types/jest": "27.4.0",
+    "@types/node": "17.0.8",
+    "@types/react": "17.0.38",
+    "@types/react-dom": "17.0.11",
+    "@types/react-redux": "7.1.21",
+    "@types/react-router-dom": "5.3.2",
+    "@types/redux-mock-store": "1.0.3",
+    "@types/styled-components": "5.1.19",
+    "eslint": "8.7.0",
+    "husky": "^7.0.0",
+    "lint-staged": "12.1.6",
+    "prettier": "2.5.1",
+    "redux-mock-store": "1.5.4",
+    "stylelint": "14.2.0",
+    "stylelint-config-osedea": "3.0.0"
+  }
+}
